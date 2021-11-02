@@ -135,7 +135,7 @@ Create two config files names `/etc/slurm-llnl/slurm.conf` and  `/etc/slurm-lln
   #SchedulerTimeSlice=30
   SchedulerType=sched/backfill
   SelectType=select/cons_res
-  SelectTypeParameters=CR_Core
+  SelectTypeParameters=CR_CPU
   #
   #
   # JOB PRIORITY
@@ -194,7 +194,7 @@ Create two config files names `/etc/slurm-llnl/slurm.conf` and  `/etc/slurm-lln
   #
   #
   # COMPUTE NODES
-  NodeName=xju-aslp4 CPUs=64 RealMemory=256000 Sockets=2 CoresPerSocket=16 ThreadsPerCore=2 Gres=gpu:7
+  NodeName=xju-aslp4 CPUs=64 RealMemory=256000 Sockets=2 CoresPerSocket=32 ThreadsPerCore=1 Gres=gpu:7
   PartitionName=XJU Nodes=xju-aslp4 Default=YES MaxTime=INFINITE State=UP
   ```
   
@@ -242,3 +242,7 @@ Slurm management
   # show all node stauts
   sinfo
   ```
+  
+  ## REFERENCE
+
+    https://slurm.schedmd.com/slurm.conf.html#OPT_SelectType
