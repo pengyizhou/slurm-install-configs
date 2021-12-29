@@ -223,7 +223,7 @@ Start services `slurmctld` and `slurmd`:
 
     sudo service slurmd start
     sudo service slurmctld start
-    sudo systemctl enabel slurmctld
+    sudo systemctl enable slurmctld
 
 Slurm management
   
